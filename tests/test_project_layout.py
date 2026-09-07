@@ -16,6 +16,10 @@ from scripts.check_sensitive_paths import find_sensitive_paths  # noqa: E402
 
 
 class ContinuousIntegrationContractTests(unittest.TestCase):
+    def test_required_check_blocking_probe(self) -> None:
+        """Intentional one-commit failure used to verify branch protection."""
+        self.fail("intentional required-check blocking probe; do not merge")
+
     def test_workflow_runs_root_tests_on_python_312(self) -> None:
         workflow = (PROJECT_ROOT / ".github/workflows/tests.yml").read_text(encoding="utf-8")
 
