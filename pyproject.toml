@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qimen-core"
+version = "0.0.0"
+description = "Controlled Qimen engineering skeleton; no chart algorithm is enabled."
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["qimen_core*"]

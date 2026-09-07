@@ -1,0 +1,45 @@
+# Local secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+.ssh/
+.aws/
+
+# Uploaded originals, historical deliveries, and local evidence
+sources/
+archive/
+evidence/
+reference/
+taskpack/reference/
+
+# Source/archive media must never be swept into a remote commit
+*.zip
+*.7z
+*.rar
+*.doc
+*.docx
+*.pdf
+*.mp3
+*.mp4
+*.wav
+*.whl
+
+# Python and build outputs
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+
+# Local tool requests and temporary work
+.webbridge-req-*.json
+*.tmp
+*.temp
